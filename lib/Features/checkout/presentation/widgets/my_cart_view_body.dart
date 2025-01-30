@@ -1,4 +1,5 @@
-import 'package:checkout/core/utils/styles.dart';
+import 'package:checkout/Features/checkout/presentation/widgets/cart_info_item.dart';
+import 'package:checkout/Features/checkout/presentation/widgets/total_price.dart';
 import 'package:flutter/material.dart';
 
 class MyCartViewBody extends StatelessWidget {
@@ -35,32 +36,16 @@ class MyCartViewBody extends StatelessWidget {
             title: 'Shipping',
             value: r'$8',
           ),
+          const Divider(
+            color: Color(0xffC7C7C7),
+            thickness: 2,
+            height: 34,
+            endIndent: 20,
+            indent: 20,
+          ),
+          const TotalPrice(title: 'Total', value: r'$50.97'),
         ],
       ),
-    );
-  }
-}
-
-class OrderInfoItem extends StatelessWidget {
-  const OrderInfoItem({super.key, required this.title, required this.value});
-  final String title, value;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          title,
-          textAlign: TextAlign.center,
-          style: Styles.style18,
-        ),
-        const Spacer(),
-        Text(
-          value,
-          textAlign: TextAlign.center,
-          style: Styles.style18,
-        ),
-      ],
     );
   }
 }
