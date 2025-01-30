@@ -1,6 +1,6 @@
+import 'package:checkout/Features/checkout/presentation/views/payment_details.dart';
 import 'package:checkout/Features/checkout/presentation/widgets/cart_info_item.dart';
 import 'package:checkout/Features/checkout/presentation/widgets/total_price.dart';
-import 'package:checkout/core/utils/styles.dart';
 import 'package:checkout/core/utils/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +16,9 @@ class MyCartViewBody extends StatelessWidget {
           const SizedBox(
             height: 25,
           ),
-          Image.asset('assets/images/basket_image.png'),
+          Expanded(
+            child: Image.asset('assets/images/basket_image.png'),
+          ),
           const SizedBox(
             height: 25,
           ),
@@ -49,7 +51,13 @@ class MyCartViewBody extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          const CustomButton(),
+          CustomButton(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return const PaymentDetailsView();
+              }));
+            },
+          ),
           const SizedBox(
             height: 12,
           ),
