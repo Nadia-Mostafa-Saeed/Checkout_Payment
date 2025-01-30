@@ -30,7 +30,9 @@ android {
         versionName = flutter.versionName
         multiDexEnabled true
     }
-
+    dependencies {
+        implementation 'com.android.support:multidex:2.0.1'
+    }
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
