@@ -2,7 +2,8 @@ import 'package:checkout/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.onTap});
+  const CustomButton({super.key, this.onTap, required this.title});
+  final String title;
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
@@ -17,9 +18,9 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            'Complete Payment',
+            title,
             style: Styles.style22,
           ),
         ),

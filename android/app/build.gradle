@@ -6,8 +6,8 @@ plugins {
 }
 
 android {
-    namespace = "com.example.checkout"
-    compileSdk = flutter.compileSdkVersion
+    namespace = "com.example.flutter_credit_card"
+    compileSdk = 34//flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -28,11 +28,8 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-        multiDexEnabled true
     }
-    dependencies {
-        implementation 'com.android.support:multidex:2.0.1'
-    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
@@ -40,6 +37,7 @@ android {
             signingConfig = signingConfigs.debug
         }
     }
+    
 }
 
 flutter {
