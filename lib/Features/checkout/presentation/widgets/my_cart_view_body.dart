@@ -1,4 +1,3 @@
-import 'package:checkout/Features/checkout/presentation/views/payment_details.dart';
 import 'package:checkout/Features/checkout/presentation/widgets/cart_info_item.dart';
 import 'package:checkout/Features/checkout/presentation/widgets/payment_methods_list_view.dart';
 import 'package:checkout/Features/checkout/presentation/widgets/total_price.dart';
