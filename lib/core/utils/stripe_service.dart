@@ -26,6 +26,10 @@ class StripeService {
       merchantDisplayName: 'Nadia Mostafa',
     ));
   }
+
+  Future displayPaymentSheet() async {
+    Stripe.instance.presentPaymentSheet();
+  }
 }
 //paymentIntentObject create payment intent(amount,currency)
 // init payment sheet (paymentIntentClinetSecret)
