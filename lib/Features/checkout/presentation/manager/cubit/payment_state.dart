@@ -13,5 +13,4 @@ final class PaymentFailure extends PaymentState {
   final String errMessage;
 
   PaymentFailure(this.errMessage);
-  
 }
