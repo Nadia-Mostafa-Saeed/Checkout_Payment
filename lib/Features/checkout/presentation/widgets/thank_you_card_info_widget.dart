@@ -1,4 +1,3 @@
-import 'package:checkout/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -24,16 +23,28 @@ class ThankYouCardInfoWidget extends StatelessWidget {
           const SizedBox(
             width: 23,
           ),
-          const Text.rich(
+          Text.rich(
             TextSpan(
               children: [
-                TextSpan(
-                  text: 'Credit Card',
-                  style: Styles.style18,
+                const TextSpan(
+                  text: 'Credit Card ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w400,
+                    height: 0,
+                  ),
                 ),
                 TextSpan(
                   text: 'Mastercard **78',
-                  style: Styles.style16,
+                  style: TextStyle(
+                    color: Colors.black.withOpacity(0.699999988079071),
+                    fontSize: 16,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w400,
+                    height: 0,
+                  ),
                 ),
               ],
             ),

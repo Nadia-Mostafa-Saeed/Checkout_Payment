@@ -9,6 +9,8 @@ AppBar buildAppBar({final String? title}) {
         'assets/images/arrow.svg',
       ),
     ),
+    elevation: 0,
+    backgroundColor: Colors.transparent,
     centerTitle: true,
     title: Text(
       title ?? '',

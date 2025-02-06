@@ -9,15 +9,15 @@ class ThankYouViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(32),
+      padding: const EdgeInsets.all(20),
       child: Stack(
         clipBehavior: Clip.none,
         children: [
           const ThankYouCard(),
           Positioned(
               bottom: MediaQuery.sizeOf(context).height * .2 + 20,
-              right: 28,
-              left: 28,
+              right: 20 + 8,
+              left: 20 + 8,
               child: const CustomDashedLine()),
           Positioned(
             left: -20,
@@ -34,7 +34,11 @@ class ThankYouViewBody extends StatelessWidget {
             ),
           ),
           const Positioned(
-              top: -50, right: 0, left: 0, child: CustomCheckIcon())
+            top: -50,
+            right: 0,
+            left: 0,
+            child: CustomCheckIcon(),
+          ),
         ],
       ),
     );

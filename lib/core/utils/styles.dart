@@ -27,6 +27,7 @@ abstract class Styles {
     fontSize: 18,
     fontFamily: 'Inter',
     fontWeight: FontWeight.w400,
+    height: 0,
   );
 
   static const TextStyle style22 = TextStyle(
@@ -48,5 +49,6 @@ abstract class Styles {
     fontSize: 16,
     fontFamily: 'Inter',
     fontWeight: FontWeight.w400,
+    height: 0,
   );
 }
