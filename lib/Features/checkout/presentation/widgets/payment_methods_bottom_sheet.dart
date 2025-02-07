@@ -2,24 +2,47 @@ import 'package:checkout/Features/checkout/presentation/widgets/custom_button_bl
 import 'package:checkout/Features/checkout/presentation/widgets/payment_methods_list_view.dart';
 import 'package:flutter/material.dart';
 
-class PaymentMethodsBottomSheet extends StatelessWidget {
+class PaymentMethodsBottomSheet extends StatefulWidget {
   const PaymentMethodsBottomSheet({super.key});
 
   @override
+  State<PaymentMethodsBottomSheet> createState() =>
+      _PaymentMethodsBottomSheetState();
+}
+
+class _PaymentMethodsBottomSheetState extends State<PaymentMethodsBottomSheet> {
+  bool isPayPal = false;
+  bool isStripe = false;
+
+  choosePaymentMethod({required int index}) {
+    if (index == 0) {
+      isStripe = true;
+    } else if (index == 1) {
+      isPayPal = true;
+    }
+    setState(() {});
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(16),
+    return Padding(
+      padding: const EdgeInsets.all(16),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
-          PaymentMethodsListView(),
-          SizedBox(
+          PaymentMethodsListView(
+            choosePaymentMethod: choosePaymentMethod,
+          ),
+          const SizedBox(
             height: 32,
           ),
-          CustomButtonBlockConsumer(),
+          CustomButtonBlockConsumer(
+            isPayPal: isPayPal,
+            isStripe: isStripe,
+          ),
         ],
       ),
     );
